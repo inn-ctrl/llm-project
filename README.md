@@ -38,6 +38,9 @@ Interpretation: The model seems to be fully agreeing with the EDA, which begs th
 ## Hyperparameters
 (fill in details about which hyperparemeters you found most important/relevant while optimizing your model)
 
-* sample size n: throughout the whole process, the sample size was being adjusted so see the performance of the model overtime. This helped us see what the score looks like overtime.
+* sample size n: throughout the whole process, the sample size was being adjusted so see the performance of the model overtime. This helped us see what the score looks like overtime.​
+* Batch size: The number of samples processed before updating the model during training.​
+* Learning rate: The rate at which the model's parameters are updated during training.​
+* Number of epochs: The model iterates over the entire dataset these times during training.​
 
 ##
