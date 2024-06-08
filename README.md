@@ -15,7 +15,7 @@ The original dataset is 'yelp_review_full' dataset accessed via this link(https:
 (fill in details about the pre-trained model you selected)
 As said above, the approach to the dataset was different. Most notably, the sheer size imposed so much computational requirements that the only decision was to randomly sample it. The understanding is however that whatever model evaluated will only be on the sample. However, we concluded by mentioning the best performing model, but the project explores two. 
 
-While deciding, we would be helped by understanding the data sample so that whatever model represent it well is said to perform well. The histogram in the file 4-optimization.ipynb shows us the sentiment distribution. Among the sample of 300 reviewers, a big number is negative and a small number is positive. 
+While deciding, we would be helped by understanding the data sample so that whatever model represent it well is said to perform well. The histogram in the file 4-optimization.ipynb shows us the sentiment distribution.  
 1. roberta:
 Overall this model is still lower but it is better compared to distilbert. therefore we combined that with the recoall score which interestingly falls at 0.73. That shows how the model is likely to indetify true positives in the dataset.
 Results: This model shows us that among 300 reviews, 225 are positive and 75 are negative
@@ -23,8 +23,8 @@ Interpretation: This is not a very convincing result because it is different fro
  
 Therefore, an arbitrary sensible conclusion is that the movie reviews do include 225 positive reviews and 75 negative reviews. 
 
-3. distilbert:
-This model fails to representat the sampled data very well. Looking at both precision and recall (0.02 and 0.15 on weighted avg), we can see that the model did not represent negative and positive records enough. Recall fals at 1 which means that it perfectly indentified true positives in the dataset. Considering that score, lack of consideration for true negatives, and overall low model accuracy score of 0.15, we did not go with this models findings at this stage. 
+2. distilbert:
+This model fails to representat the sampled data very well. Looking at both precision and recall (0.03 and 0.11 on weighted avg), we can see that the model did not represent negative and positive records enough. Recall falls at 1 which means that it perfectly indentified true positives in the dataset. Considering that score, lack of consideration for true negatives, and overall low model accuracy score of 0.15, we did not go with this models findings at this stage. 
 
 Results: This model shows that all 300 move reviews are negative.
 Interpretation: The model seems to be fully agreeing with the EDA, which begs the need for further exploration as it may even perform better if we consider the whole dataset. That remains something for future exploration due to the computational challenge for the full dataset. However, for now we can say that distilbert does not represent our sample very well. 
